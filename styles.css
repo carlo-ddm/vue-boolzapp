@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 
-.clearfix::after {
+/* ERRORE */
+/* .clearfix::after {
   content: '';
   clear: both;
   display: table;
-}
+} */
 
 header {
   width: 100%;
@@ -20,4 +21,15 @@ main {
   width: 100%;
   height: calc(100vh - 100px);
   background-image: url(abab60f06ab52fa7846593e6ae0c9a0b.png);
+}
+
+/* CONTENITORE APP */
+.container {
+  position: relative;
+  top: 30px;
+  margin: auto;
+  width: 80%;
+  height: 500px;
+  border: 1px solid black;
+
 }
