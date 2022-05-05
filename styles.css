@@ -46,7 +46,6 @@
   background-color: #E5E5E5;
   padding: 20px 0;
   width: 100%;
-  border-bottom: 1px solid #A2A2A2;
 }
 
 .nome-utente {
@@ -109,11 +108,30 @@ input {
   border-radius: 5px;
 }
 
-/* .chat {
+/* CHAT --> ITEMS  */
+.container-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 300px;
-  background-color: white;
-} */
+  height: 60px;
+  border-bottom: 1px solid #A2A2A2;
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  padding: 8px;
+  border-radius: 100%;
+  width: 40px;
+}
+
+.avatar {
+  display: inline-block;
+  width: 40px;
+  border-radius: 100%;
+}
 
 /* contenitore centrale -> lato DX -> top box */
 .top-right-box {
@@ -122,7 +140,6 @@ input {
   background-color: #E5E5E5;
   padding: 20px 0;
   width: 100%;
-  border-bottom: 1px solid #A2A2A2
 }
 
 /* contenitore centrale -> lato DX -> bottom box */
@@ -132,7 +149,6 @@ input {
   background-color: #F0EAE5;
   padding: 10px 0;
   width: 100%;
-  border-top: 1px solid #A2A2A2
 }
 
 .container-smile, .container-mic {
