@@ -4,12 +4,11 @@
   box-sizing: border-box;
 }
 
-/* ERRORE */
-/* .clearfix::after {
+.clearfix::after {
   content: '';
   clear: both;
   display: table;
-} */
+}
 
 .global{
   position: relative;
@@ -40,4 +39,12 @@ main {
   height: 750px;
   border: 1px solid black;
   z-index: 999;
+}
+
+.col-left {
+  float: left;
+  width: 30%;
+  height: 100%;
+  min-width: 20%;
+  border-right: 1px solid black;
 }
