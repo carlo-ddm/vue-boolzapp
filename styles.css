@@ -74,7 +74,7 @@ i {
   justify-content: start;
   padding: 20px 0;
   background-color: #7BD1FD;
-  border-bottom: 1px solid #A2A2A2;
+  /* border-bottom: 1px solid #A2A2A2; */
 }
 
 .bell {
@@ -114,17 +114,16 @@ input {
 /* CHAT --> ITEMS  */
 .chat {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   height: 85px;
   padding: 5px 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #A2A2A2;
 }
 
 .container-item {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 100%;
 }
 
 /* .container-img {
@@ -138,7 +137,8 @@ input {
 
 .avatar {
   display: inline-block;
-  width: 50px;
+  width: 60px;
+  height: 60px;
   margin: 0 10px;
   border-radius: 100%;
 }
