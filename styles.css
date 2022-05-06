@@ -55,7 +55,7 @@ body {
 .col-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   background-image: url(img/mine.jpg);
   width: calc(100% - 40%);
 }
@@ -155,6 +155,7 @@ input {
   margin-right: 10px;
 }
 
+/* RIGHT SIDE */
 /* contenitore centrale -> lato DX -> top box */
 .top-right-box {
   display: flex;
@@ -163,6 +164,11 @@ input {
   height: 70px;
   background-color: #E5E5E5;
   width: 100%;
+}
+
+.text-container{
+  height: 100%;
+  padding: 50px;
 }
 
 /* contenitore centrale -> lato DX -> bottom box */
@@ -194,5 +200,7 @@ input {
   color: lightgray;
   font-size: 12px;
 }
+
+
 
 
