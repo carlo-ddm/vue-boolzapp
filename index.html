@@ -56,15 +56,15 @@
           <input type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
         <!-- PROFILI -->
-        <div class="chat">
-          <img class="avatar" src="img/avatar_1.jpg" alt="avatar-1">
+        <div v-for="(profile, index) in profiles" class="chat">
+          <img class="avatar" :src="`img/avatar${profile.avatar}.jpg`" alt="avatar-1">
 
           <div class="container-item">
             <div>
-              <span>Michele</span>
+              <span>{{profile.name}}</span>
               <span class="f-right" >Data</span>
             </div>
-            <div class="last-mex">
+            <div class="color-mex">
               <span>Ultimo messaggio inviato</span>
             </div>
           </div>
@@ -83,8 +83,8 @@
           <div class="nome-utente">
             <img class="avatar" src="img/avatar_1.jpg" alt="avatar">
             <div class="ut" >
-              <span>Michele</span>
-              <span>Ultimo messaggio</span>
+              <div>Michele</div>
+              <div class="color-mex"><span>Ultimo accesso oggi alle 12</span></div>
             </div>
           </div>
 
