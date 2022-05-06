@@ -24,8 +24,8 @@
         <div class="top-left-box">
           <!-- Nome Utente -->
           <div class="nome-utente">
-            <img class="avatar" src="img/avatar_2.jpg" alt="avatar_2">
-            <span>Nome Utente</span>
+            <img class="avatar" :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
+            <span>{{user.name}}</span>
           </div>
           
           <!-- Fonts -->
@@ -46,7 +46,7 @@
           <div class="notifications">
             <div>Ricevi notifiche di nuovi messaggi</div>
             <div>
-              <a href="#">Attiva notifiche testo</a>
+              <a class="color-gray" href="#">Attiva notifiche testo</a>
             </div>
           </div>
         
@@ -57,14 +57,14 @@
         </div>
         <!-- PROFILI -->
         <div v-for="(profile, index) in profiles" class="chat">
-          <img class="avatar" :src="`img/avatar${profile.avatar}.jpg`" alt="avatar-1">
+          <img class="avatar" :src="`img/avatar${profile.avatar}.jpg`" :alt="profile.name">
 
           <div class="container-item">
             <div>
               <span>{{profile.name}}</span>
-              <span class="f-right" >Data</span>
+              <span class="f-right color-gray">00/00/0000 00:00:00</span>
             </div>
-            <div class="color-mex">
+            <div class="color-gray">
               <span>Ultimo messaggio inviato</span>
             </div>
           </div>
@@ -84,7 +84,7 @@
             <img class="avatar" src="img/avatar_1.jpg" alt="avatar">
             <div class="ut" >
               <div>Michele</div>
-              <div class="color-mex"><span>Ultimo accesso oggi alle 12</span></div>
+              <div class="color-gray"><span>Ultimo accesso oggi alle 12</span></div>
             </div>
           </div>
 
@@ -100,8 +100,24 @@
           </div>
         </div>
 
-        <!-- TESTI -->
-        <div class="text-container">Bella Zzi!"</div>
+        <!-- ************ -->
+        <div class="text-container">
+
+          <div class="right-message">
+            <div class="message sent">
+              <div class="message-text">zio</div>
+              <div class="message-time" >00/00/000 00:00:00</div>
+            </div>
+          </div>
+
+          <div class="right-message">
+            <div class="message received">
+              <div class="message-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis exercitationem cupiditate iusto ullam delectus!</div>
+              <div class="message-time" >00/00/000 00:00:00</div>
+            </div>
+          </div>
+          
+        </div>
 
         <!-- BOTTOM-RIGHT-BOX -->
         <div class="bottom-right-box">

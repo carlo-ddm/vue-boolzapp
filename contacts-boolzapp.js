@@ -1,6 +1,11 @@
 const app = new Vue ({
     el: '#app',
     data: {
+        user: {
+            name: 'Carlo',
+            avatar: '_2',
+        },
+
         profiles:[
             {
                 name: 'Michele',
