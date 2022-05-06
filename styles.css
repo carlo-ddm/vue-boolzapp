@@ -1,30 +1,46 @@
+/* Esercizio di oggi: Boolzapp
+nome repo: vue-boolzapp
+Milestone 1
+Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse
+Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
+Note:
+non è importante per ora che tutti gli elementi grafici siano presenti, l’importante che la struttura sia come da specifiche
+l’elenco degli utenti deve essere generato con un v-for e stampare almeno il nome e l’avatar (ultimo messaggio e data per ora possono essere fake)
+provate sia con tanti e pochi messaggi con messaggi lunghi o corti. La pagina non si deve mai spaccare */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-span {
-  display: block;
+
+body {
+  font-family:'Lato', sans-serif;
 }
 
 .global{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #D0D3CB;
+  background-image: linear-gradient(to bottom,
+  #009688 0px,
+  #009688 15vh,
+  #dddbd1 15vh,
+  #dddbd1 100%);
   height: 100vh;
+  
 }
 
 /* CONTENITORE APP */
 .container {
   display: flex;
   justify-content: start;
-  background-image: url(abab60f06ab52fa7846593e6ae0c9a0b.png);
+ 
   margin: auto;
   width: 80%;
   min-width: 900px;
   height: 95%;
-  border: 1px solid #A2A2A2;
+  border: 1px solid lightgray;
   z-index: 999;
 }
 
@@ -33,12 +49,14 @@ span {
   width: 40%;
   min-width: 30%;
   height: 100%;
-  border-right: 1px solid #A2A2A2;
+  border-right: 1px solid lightgray;
+  overflow-y: scroll;
 }
 .col-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url(img/mine.jpg);
   width: calc(100% - 40%);
 }
 
@@ -46,13 +64,16 @@ span {
 .top-left-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 70px;
   background-color: #E5E5E5;
-  padding: 20px 0;
   width: 100%;
 }
 
 .nome-utente {
-  margin: 0 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .icons-container{
@@ -72,23 +93,20 @@ i {
 .top-left-notification {
   display: flex;
   justify-content: start;
-  padding: 20px 0;
+  align-items: center;
+  height: 70px;
   background-color: #7BD1FD;
-  /* border-bottom: 1px solid #A2A2A2; */
+  width: 100%;
 }
 
-.bell {
-  display: flex;
-  justify-content: center;
+
+/* Sistemare */
+#b-bell {
+  background-color: white;
+  color: #7BD1FD;
   margin: 0 10px;
   padding: 8px;
-  background-color: white;
-  border-radius: 100%;
-  width: 40px;
-}
-
-#b-bell {
-  color: #7BD1FD;
+  border-radius: 50%;
 }
 
 a {
@@ -114,26 +132,15 @@ input {
 /* CHAT --> ITEMS  */
 .chat {
   display: flex;
-  justify-content: space-between;
-  height: 85px;
-  padding: 5px 0;
-  border-bottom: 1px solid #A2A2A2;
+  justify-content: start;
+  align-items: center;
+  height: 70px;
+  border-bottom: 1px solid lightgray;
 }
 
 .container-item {
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  width: 100%;
 }
-
-/* .container-img {
-  display: flex;
-  justify-content: center;
-  margin: 0 10px;
-  background-color: white;
-  border-radius: 100%;
-  width: 50px;
-} */
 
 .avatar {
   display: inline-block;
@@ -143,12 +150,18 @@ input {
   border-radius: 100%;
 }
 
+.f-right {
+  float: right;
+  margin-right: 10px;
+}
+
 /* contenitore centrale -> lato DX -> top box */
 .top-right-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 70px;
   background-color: #E5E5E5;
-  padding: 20px 0;
   width: 100%;
 }
 
@@ -176,6 +189,5 @@ input {
   border: none;
   border-radius: 5px;
 }
-
 
 

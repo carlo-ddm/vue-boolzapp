@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==' crossorigin='anonymous'/>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <link rel="stylesheet" href="styles.css">
@@ -20,7 +23,11 @@
         <!-- TOP-LEFT-BOX -->
         <div class="top-left-box">
           <!-- Nome Utente -->
-          <div class="nome-utente">Nome utente</div>
+          <div class="nome-utente">
+            <img class="avatar" src="img/avatar_2.jpg" alt="avatar_2">
+            <span>Nome Utente</span>
+          </div>
+          
           <!-- Fonts -->
           <div class="icons-container">
             <!-- circle-notch -->
@@ -34,10 +41,7 @@
 
         <!-- Ricevi notifiche di nuovi messaggi -->
         <div class="top-left-notification">
-
-          <div class="bell">
-            <i id="b-bell" class="fa-solid fa-bell-slash"></i>
-          </div>
+          <i id="b-bell" class="fa-solid fa-bell-slash"></i>
             
           <div class="notifications">
             <div>Ricevi notifiche di nuovi messaggi</div>
@@ -53,18 +57,18 @@
         </div>
         <!-- PROFILI -->
         <div class="chat">
+          <img class="avatar" src="img/avatar_1.jpg" alt="avatar-1">
 
           <div class="container-item">
-            <img class="avatar" src="img/avatar_1.jpg" alt="avatar-1">
             <div>
               <span>Michele</span>
-              <span>...</span>
+              <span class="f-right" >Data</span>
+            </div>
+            <div class="last-mex">
+              <span>Ultimo messaggio inviato</span>
             </div>
           </div>
-
-          <div class="hour">
-            <span>12/12/2022</span>
-          </div>
+          
         </div>
       </div>
 
@@ -74,8 +78,17 @@
       <div class="col-right">
         <!-- TOP-RIGHT-BOX -->
         <div class="top-right-box">
+
           <!-- Nome Utente -->
-          <div class="nome-utente">Nome utente</div>
+          <div class="nome-utente">
+            <img class="avatar" src="img/avatar_1.jpg" alt="avatar">
+            <div class="ut" >
+              <span>Michele</span>
+              <span>Ultimo messaggio</span>
+            </div>
+          </div>
+
+    
           <!-- Fonts -->
           <div class="icons-container">
             <!-- search -->
