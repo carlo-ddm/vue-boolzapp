@@ -53,7 +53,9 @@
         </div>
         <!-- INPUT -->
         <div class="container-input">
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <input v-model="search"
+          @keyup=""
+          type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
         <!-- PROFILI -->
         <div @click="indiceSelezionato = index" v-for="(profile, index) in profiles" class="chat">

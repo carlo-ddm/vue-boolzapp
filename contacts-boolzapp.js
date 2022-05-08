@@ -1,4 +1,4 @@
-const app = new Vue ({
+const app = new Vue({
     el: '#app',
     data: {
         user: {
@@ -9,8 +9,9 @@ const app = new Vue ({
         indiceSelezionato: 0,
 
         newText: '',
+        search: '',
 
-        profiles:[
+        profiles: [
             {
                 name: 'Michele',
                 avatar: '_1',
@@ -175,9 +176,9 @@ const app = new Vue ({
         ]
     },
     methods: {
-        addText(){
+        addText() {
 
-            if (this.newText.length >= 1){
+            if (this.newText.length >= 1) {
 
                 this.profiles[this.indiceSelezionato].messages.push(
                     {
@@ -200,6 +201,19 @@ const app = new Vue ({
                 }, 1000)
 
             }
+        },
+
+        searchProfile() {
+            this.profiles.forEach(el => {
+                if (this.el.name.includes(this.search))
+                {
+                    el.visible = true;
+                } else {
+                    el.visible = false;
+                }
+
+
+            });
         }
 
     },
