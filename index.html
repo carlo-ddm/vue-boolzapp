@@ -119,7 +119,10 @@
           <div class="container-smile">
             <i class="fa-regular fa-face-smile"></i>
           </div>
-          <input id="mex" type="Scrivi" placeholder="Scrivi un messaggio">
+          <input id="mex"
+          v-model="newText"
+          @keyup.enter="addText()"
+          type="Scrivi" placeholder="Scrivi un messaggio">
           <div class="container-mic">
             <i class="fa-solid fa-microphone"></i>
           </div>

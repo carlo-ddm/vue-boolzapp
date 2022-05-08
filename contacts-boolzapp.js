@@ -8,6 +8,8 @@ const app = new Vue ({
 
         indiceSelezionato: 0,
 
+        newText: '',
+
         profiles:[
             {
                 name: 'Michele',
@@ -165,13 +167,42 @@ const app = new Vue ({
                     },
                     {
                         date: '10/01/2020 15:51:00',
-                        message: 'OK!!',
+                        message: 'OK!',
                         status: 'received'
                     }
                 ],
             }
         ]
-    }
+    },
+    methods: {
+        addText(){
+
+            if (this.newText.length >= 1){
+
+                this.profiles[this.indiceSelezionato].messages.push(
+                    {
+                        data: '00/00/000 00:00:00',
+                        message: this.newText,
+                        status: 'sent'
+                    }
+                )
+                this.newText = '';
+
+                setTimeout(() => {
+                    this.profiles[this.indiceSelezionato].messages.push(
+                        {
+                            data: '00/00/000 00:00:00',
+                            message: 'Ok!',
+                            status: 'received'
+                        }
+                    )
+
+                }, 1000)
+
+            }
+        }
+
+    },
 
 })
 
