@@ -231,6 +231,10 @@ input {
   color: #B6BBBC;
 }
 
+.active {
+  background-color: #E4E6E6;
+}
+
 
 
 

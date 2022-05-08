@@ -104,20 +104,13 @@
         <div class="text-container">
           <!-- SPEDITI -->
           <div class="right-message">
-            <div class="message sent">
+            <div v-for="el in profiles[indiceSelezionato].messages" :class="`message ${el.status}`">
               <div
-              v-for="el in profiles[indiceSelezionato].messages" class="message-text">{{el.message}}</div>
+              class="message-text">{{el.message}}</div>
               <div class="message-time" >00/00/000 00:00:00</div>
             </div>
           </div>
-          <!-- RICEVUTI -->
-          <div class="right-message">
-            <div class="message received">
-              <div
-              v-for="el in profiles[indiceSelezionato].messages" class="message-text">{{el.message}}</div>
-              <div class="message-time" >00/00/000 00:00:00</div>
-            </div>
-          </div>
+          
           
         </div>
 
