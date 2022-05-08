@@ -56,7 +56,7 @@
           <input type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
         <!-- PROFILI -->
-        <div v-for="(profile, index) in profiles" class="chat">
+        <div @click="indiceSelezionato = index" v-for="(profile, index) in profiles" class="chat">
           <img class="avatar" :src="`img/avatar${profile.avatar}.jpg`" :alt="profile.name">
 
           <div class="container-item">
@@ -81,9 +81,9 @@
 
           <!-- Nome Utente -->
           <div class="nome-utente">
-            <img class="avatar" src="img/avatar_1.jpg" alt="avatar">
+            <img class="avatar" :src="'img/avatar'+profiles[indiceSelezionato].avatar+'.jpg'" alt="avatar">
             <div class="ut" >
-              <div>Michele</div>
+              <div>{{profiles[indiceSelezionato].name}}</div>
               <div class="color-gray"><span>Ultimo accesso oggi alle 12</span></div>
             </div>
           </div>
@@ -100,22 +100,22 @@
           </div>
         </div>
 
-        <!-- ************ -->
+        <!-- *****MESSAGGI******* -->
         <div class="text-container">
 
-          <div class="right-message">
+          <div v-for="(profile, index) in profiles[indiceSelezionato].messages" class="right-message">
             <div class="message sent">
               <div class="message-text">zio</div>
               <div class="message-time" >00/00/000 00:00:00</div>
             </div>
           </div>
 
-          <div class="right-message">
+          <!-- <div class="right-message">
             <div class="message received">
               <div class="message-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis exercitationem cupiditate iusto ullam delectus!</div>
               <div class="message-time" >00/00/000 00:00:00</div>
             </div>
-          </div>
+          </div> -->
           
         </div>
 

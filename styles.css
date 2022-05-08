@@ -169,7 +169,7 @@ input {
 .text-container{
   height: 100%;
   padding: 50px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 /* contenitore centrale -> lato DX -> bottom box */
@@ -230,6 +230,8 @@ input {
   font-size: 10px;
   color: #B6BBBC;
 }
+
+
 
 
 

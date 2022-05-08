@@ -6,6 +6,8 @@ const app = new Vue ({
             avatar: '_2',
         },
 
+        indiceSelezionato: 0,
+
         profiles:[
             {
                 name: 'Michele',
@@ -170,10 +172,7 @@ const app = new Vue ({
             }
         ]
     }
-    
-    // methods: {
-        
-    // },
+
 })
 
 
