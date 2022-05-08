@@ -102,20 +102,22 @@
 
         <!-- *****MESSAGGI******* -->
         <div class="text-container">
-
-          <div v-for="(profile, index) in profiles[indiceSelezionato].messages" class="right-message">
+          <!-- SPEDITI -->
+          <div class="right-message">
             <div class="message sent">
-              <div class="message-text">zio</div>
+              <div
+              v-for="el in profiles[indiceSelezionato].messages" class="message-text">{{el.message}}</div>
               <div class="message-time" >00/00/000 00:00:00</div>
             </div>
           </div>
-
-          <!-- <div class="right-message">
+          <!-- RICEVUTI -->
+          <div class="right-message">
             <div class="message received">
-              <div class="message-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis exercitationem cupiditate iusto ullam delectus!</div>
+              <div
+              v-for="el in profiles[indiceSelezionato].messages" class="message-text">{{el.message}}</div>
               <div class="message-time" >00/00/000 00:00:00</div>
             </div>
-          </div> -->
+          </div>
           
         </div>
 
