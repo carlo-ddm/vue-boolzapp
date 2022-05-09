@@ -30,11 +30,8 @@
           
           <!-- Fonts -->
           <div class="icons-container">
-            <!-- circle-notch -->
             <i class="fa-solid fa-circle-notch"></i>
-            <!-- chat -->
             <i class="fa-solid fa-message"></i>
-            <!-- ellipsis -->
             <i class="fa-solid fa-ellipsis-vertical"></i>
           </div>
         </div>
@@ -42,23 +39,30 @@
         <!-- Ricevi notifiche di nuovi messaggi -->
         <div class="top-left-notification">
           <i id="b-bell" class="fa-solid fa-bell-slash"></i>
-            
           <div class="notifications">
             <div>Ricevi notifiche di nuovi messaggi</div>
             <div>
-              <a class="color-gray" href="#">Attiva notifiche testo</a>
+              <a class="color-gray" href="#">
+                Attiva notifiche testo
+              </a>
             </div>
           </div>
-        
         </div>
+
         <!-- INPUT -->
         <div class="container-input">
           <input v-model="search"
-          @keyup=""
+          @keyup="searchProfile()"
           type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
+
         <!-- PROFILI -->
-        <div @click="indiceSelezionato = index" v-for="(profile, index) in profiles" class="chat">
+        <!-- CHAT -->
+        <div
+        :class="{'active' : indiceSelezionato == index}"
+        class="chat"
+        @click="indiceSelezionato = index"
+        v-for="(profile, index) in profiles" >
           <img class="avatar" :src="`img/avatar${profile.avatar}.jpg`" :alt="profile.name">
 
           <div class="container-item">

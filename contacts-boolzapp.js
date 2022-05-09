@@ -7,7 +7,6 @@ const app = new Vue({
         },
 
         indiceSelezionato: 0,
-
         newText: '',
         search: '',
 
@@ -177,9 +176,7 @@ const app = new Vue({
     },
     methods: {
         addText() {
-
             if (this.newText.length >= 1) {
-
                 this.profiles[this.indiceSelezionato].messages.push(
                     {
                         data: '00/00/000 00:00:00',
@@ -188,7 +185,6 @@ const app = new Vue({
                     }
                 )
                 this.newText = '';
-
                 setTimeout(() => {
                     this.profiles[this.indiceSelezionato].messages.push(
                         {
@@ -199,7 +195,6 @@ const app = new Vue({
                     )
 
                 }, 1000)
-
             }
         },
 
@@ -214,6 +209,7 @@ const app = new Vue({
 
 
             });
+            console.log(this.search);
         }
 
     },
