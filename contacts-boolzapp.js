@@ -200,17 +200,24 @@ const app = new Vue({
 
         searchProfile() {
             this.profiles.forEach(el => {
-                if (this.el.name.includes(this.search))
+                if (el.name.toLowerCase().includes(this.search.toLowerCase()))
                 {
                     el.visible = true;
                 } else {
                     el.visible = false;
                 }
-
-
             });
             console.log(this.search);
-        }
+        },
+
+                //Alternativa a soluzione riga 76 html
+        // lastMessage(el, index) {
+        //     if(index === this.profiles[this.indiceSelezionato].messages.length - 1){
+        //         const lastMessage = el.message;
+        //         return lastMessage
+        //     }
+
+        // },
 
     },
 

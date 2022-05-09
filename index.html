@@ -61,6 +61,7 @@
         <div
         :class="{'active' : indiceSelezionato == index}"
         class="chat"
+        v-if="profile.visible"
         @click="indiceSelezionato = index"
         v-for="(profile, index) in profiles" >
           <img class="avatar" :src="`img/avatar${profile.avatar}.jpg`" :alt="profile.name">
@@ -71,7 +72,9 @@
               <span class="f-right color-gray">00/00/0000 00:00:00</span>
             </div>
             <div class="color-gray">
-              <span>Ultimo messaggio inviato</span>
+              <span v-for="(message, index) in profile.messages"
+              v-if="index === profile.messages.length - 1"
+              >{{message.message}}</span>
             </div>
           </div>
           
